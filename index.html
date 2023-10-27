@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es-ca">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/juegos.css">
+    <link rel="stylesheet" href="css/stylebackground.css">
+    
+    <title>Joc de les parelles</title>
+    <link rel="shortcut icon" href="img/parelles_icon.svg" type="image/x-icon">
+</head>
+<body>
+    <!-- Titulo -->
+    <h1 id="nuevotitulo">Joc de les parelles</h1>
+    <h2 id="parejas-encontradas">Parelles encertades: 0</h2>
+
+    <!-- Fondo -->
+    <main>
+        <div class="circle cataleg"></div>
+        <div class="circle ajuda"></div>
+        <div class="circle explorador"></div>
+        <div class="circle tramits"></div>
+    </main>
+    
+    <!-- Instrucciones -->
+    <div id="instrucciones-absoluto">
+        <div class="contenedor-instrucciones">
+            <div class="instrucciones-btn" onclick="toggleInstrucciones()">
+                <img src="img/instrucciones.png" alt="Instrucciones">
+            </div>
+            <div class="instrucciones">
+                <h3 class="titulo-ins">Instruccions</h3>
+                <p class="texto-ins">Troba els dos animals iguals.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Juego -->
+    <div class="flexbox">
+        <div id="gamebox" class="gamebox">
+                <img src="img/img1.svg" alt="Imagen 1" onclick="seleccionar(this)">
+                <img src="img/img2.svg" alt="Imagen 2" onclick="seleccionar(this)">
+                <img src="img/img3.svg" alt="Imagen 3" onclick="seleccionar(this)">
+                <img src="img/img4.svg" alt="Imagen 4" onclick="seleccionar(this)">
+                <img src="img/img5.svg" alt="Imagen 5" onclick="seleccionar(this)">
+                <img src="img/img6.svg" alt="Imagen 6" onclick="seleccionar(this)">
+                <img src="img/img7.svg" alt="Imagen 7" onclick="seleccionar(this)">
+                <img src="img/img8.svg" alt="Imagen 8" onclick="seleccionar(this)">
+                <img src="img/img9.svg" alt="Imagen 9" onclick="seleccionar(this)">
+                <img src="img/img10.svg" alt="Imagen 10" onclick="seleccionar(this)">
+                <img src="img/img11.svg" alt="Imagen 11" onclick="seleccionar(this)">
+                <img src="img/img12.svg" alt="Imagen 12" onclick="seleccionar(this)">
+                <img src="img/img13.svg" alt="Imagen 13" onclick="seleccionar(this)">
+                <img src="img/img14.svg" alt="Imagen 14" onclick="seleccionar(this)">
+                <img src="img/img15.svg" alt="Imagen 15" onclick="seleccionar(this)">
+                <img src="img/img16.svg" alt="Imagen 16" onclick="seleccionar(this)">
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+
+    <script src="js/instrucciones.js"></script>
+</body>
+</html>

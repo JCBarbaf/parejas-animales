@@ -1,0 +1,107 @@
+:root
+{
+    --tamanoGB: 600PX;
+    --tamanoSM:  10px;
+    --paddingGB: 3em;
+    --circle-size: 1px; /* Tamaño del círculo */
+    --circle-border: 5px solid rgb(0, 128, 57); /* Borde del círculo */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    margin: 10px; /* Espacio entre las imágenes */
+
+}
+
+#nuevotitulo {
+    font-size: 5rem;
+    margin-top: 72px;
+    color: var(--negro);
+    text-shadow: 3px 0 0 var(--blanco), -3px 0 0 var(--blanco), 0 3px 0 var(--blanco), 0 -3px 0 var(--blanco), 2px 2px var(--blanco), -2px -2px 0 var(--blanco), 2px -2px 0 var(--blanco), -2px 2px 0 var(--blanco);
+    text-align: center;
+    margin-top: 4.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--negro);
+    text-align: center;
+}
+
+.flexbox {
+    height: 725px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* Estilo para el contenedor de imágenes */
+#gamebox {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las imágenes se envuelvan en filas */
+    justify-content: space-between; /* Espaciado uniforme entre las imágenes en las filas */
+    max-width: var(--tamanoGB); /* Establecer un ancho máximo */
+}
+.gamebox {
+    background-color: #D1CFC3;
+    width: var(--tamanoGB);
+    height: var(--tamanoGB);
+    margin: auto;
+    border: 10px solid #B5B19A;
+    border-radius: 50px;
+    padding: var(--paddingGB);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Añade esta propiedad para que los círculos sean relativos a este contenedor */
+}
+
+#gamebox img {
+    width: calc(25% - 20px); /* Ajustar el ancho de cada imagen SVG */
+    height: auto; /* Mantener la relación de aspecto original */
+    border-radius: 50%; /* Borde circular */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    margin: 10px; /* Espacio entre las imágenes */
+    box-sizing: border-box; /* Incluir el borde en el ancho total */
+}
+
+#gamebox img:hover {
+    cursor: pointer;
+}
+.circulo{
+    border: var(--circle-border);
+}
+div.petiso {
+    animation: pequeno 0.2s ease-out forwards;
+}
+div.grande {
+    animation: grande 0.2s ease-out forwards;
+}
+@keyframes pequeno
+{
+    0% {
+        width: var(--tamanoGB);
+        height: var(--tamanoGB);
+        padding: var(--paddingGB);
+    }
+
+    100%{
+        width: var(--tamanoSM);
+        height: var(--tamanoSM);
+        padding: 0;
+    }
+
+}
+
+@keyframes grande
+{
+    0% {
+        width: var(--tamanoSM);
+        height: var(--tamanoSM);
+        padding: 0;
+    }
+
+    100%{
+        width: var(--tamanoGB);
+        height: var(--tamanoGB);
+        padding: var(--paddingGB);
+    }
+}
